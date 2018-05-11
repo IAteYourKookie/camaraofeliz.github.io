@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+ 
+  <head>
+ 
+<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'/>
+ 
+    <b:include data='blog' name='all-head-content'/>
+    <title><data:blog.pageTitle/></title>
+    <b:skin><![CDATA[/*
+-----------------------------------
+Código base por Ana Carolina
+Layout por Lorena Sakamaki
+-----------------------------------
+*/
+#navbar-iframe
+{
+display:none;
+}
+*
+{
+margin:0;
+padding:0;
+}
+ 
+body, .body-fauxcolumn-outer {
+background-color:#b6fafb;
+background-image:url(https://i.imgur.com/fPn1v09.jpg);
+background-repeat:repeat-y;
+color:#000;
+font-family:Arial;
+font-size:12px;
+}
+ 
+a:link {
+color:#E23351;
+font-weight:normal;
+text-decoration:none;
+-moz-transition-duration:0.8s;
+-webkit-transition-duration:0.8s;
+}
+a:visited {
+color:#E23351;
+}
+a:hover {
+color:#F2B844;
+cursor:help;
+text-decoration:none !important;
+}
+ 
+h1 {
+font-family: 'Lobster', cursive;
+font-size:30px;
+font-weight:normal;
+text-align:center;
+}
+ 
+a img{
+box-shadow: 0px 0px 3px #000000;
+-moz-transition-property: background-position, border, -webkit-box-shadow, -moz-box-shadow, box-shadow, color;-moz-transition-duration: 2s;
+-webkit-transition-property: background-position, border, -webkit-box-shadow, -moz-box-shadow, box-shadow, color;-webkit-transition-duration: 2s;
+-o-transition-property: background-position, -webkit-box-shadow, -moz-box-shadow, box-shadow, color;-o-transition-duration: 2s;
+background: url(http://static.tumblr.com/wajkscv/rvdmgup0n/fundo_imagens.png);
+background-position: top left;
+padding: 10px;
+border: 1px solid #fff;
+}
+a img:hover{
+-webkit-filter: grayscale(100%);z-index: -99px;
+-moz-transition-property: background-position, border, -webkit-box-shadow, -moz-box-shadow, box-shadow, color;-moz-transition-duration: 2s;
+-webkit-transition-property: background-position, border, -webkit-box-shadow, -moz-box-shadow, box-shadow, color;-webkit-transition-duration: 2s;
+-o-transition-property: background-position, -webkit-box-shadow, -moz-box-shadow, box-shadow, color;-o-transition-duration: 2s;
+background-position: bottom right;
+}
+ 
+.clear
+{
+clear:both;
+}
+/* Header--------------------------------------#header-wrapper
+{
+margin:0 auto;
+width: 1263px;
+}
+/* Outer-Wrapper----------------------------------------------- */
+#outer-wrapper
+{
+width:1263px;
+margin:auto;
+}
+#content-wrapper
+{
+font-size:12px;
+}
+#main-wrapper
+{
+background:transparent;
+color:#000;
+font-size:7px;
+width:600px;
+float:left;
+margin-top:0px;
+text-align: center;
+}
+ 
+#sidebar-wrapper-left
+{
+background:url(https://i.imgur.com/JlmntKA.png);
+width:300px;
+float:left;
+margin-top:0px;
+margin-left:100px;
+margin-right:100px;
+word-wrap:break-word;
+overflow:hidden;
+font: Arial 12px;
+max-width:300px;
+}
+/* Headings----------------------------------------------- */
+.sidebar h2
+{
+width:300px;
+height:100px;
+padding-top:50px;
+background:url(https://i.imgur.com/H7rr2e1.png);
+font-family: 'Lobster', cursive;
+font-style:none;
+font-size:30px;
+text-align:center;
+text-transform:none;
+font-weight:normal;
+letter-spacing:-0.5px;
+}
+/* Posts
+-----------------------------------------------
+*/
+ 
+.post
+{
+font-size:12px;
+text-align: justify;
+margin-bottom: 0px;
+}
+.post h3
+{
+weight: 600px;
+height:180px;
+font-size:25px;
+line-height:27px;
+text-align:center;
+background:url(http://static.tumblr.com/87gqq2a/sZImgdra4/post_titulo.png);
+font-family: 'Lobster', cursive;
+padding-left:30px;
+padding-right:30px;
+font-style:none;
+font-weight:normal;
+text-transform: none;
+padding-top:70px;
+}
+.post-header
+{
+color:#222222;
+font-style:none;
+font-size:12px;
+text-align:justify;
+margin-top: -65px;
+margin-bottom: 5px;
+background:transparent;
+}
+.post-body
+{
+padding: 0px 30px 30px 30px;
+text-align: auto;
+margin:0px 0px 0 0px;
+line-height:1.6em;
+background:url(http://static.tumblr.com/87gqq2a/QHfmgdrd2/post_texto.png);
+}
+.post-footer
+{
+height:200px;
+background:url(http://static.tumblr.com/87gqq2a/3zhmgdrdo/post_final.png);
+margin-bottom:50px;
+text-transform:none;
+text-align:center;
+letter-spacing:.1em;
+font: Arial 12px;
+line-height:1.4em;
+}
+.jump-link
+{
+text-align:right;
+padding-right:15px;
+font-size:15px;
+background:url(http://static.tumblr.com/87gqq2a/QHfmgdrd2/post_texto.png);
+}
+.tr-caption-container img
+{
+border:none;
+padding:0;
+}
+blockquote
+{
+font-style:none;
+line-height:1.3em;
+font-size:12px;
+font-family:arial;
+}
+blockquote
+{
+margin:0px;
+background: #eee;
+border-left: 15px solid #E23351;
+box-shadow:0px 0px 5px #E23351;
+padding: 10px;
+color: #000;
+border-radius:5px;
+-moz-transition-duration:0.7s;
+-webkit-transition-duration:0.7s;
+}
+blockquote:hover
+{
+border-left: 15px solid #F2B844;
+box-shadow:0px 0px 5px #F2B844;
+}
+blockquote p
+{
+margin:.75em 0;
+}
+.post ul,.post ol
+{
+margin-left:0px;
+}
+/* Comments----------------------------------------------- */
+/*Blogger Threaded Comments Styles From http://www.dicasblogger.org*/
+#comments{overflow:hidden}
+#comments h4{display:inline;padding:10px;line-height:40px}
+#comments h4,.comments .continue a{background:#fff; text-decoration:none;}
+#comments h4,.comments .comment-header,.comments .comment-thread.inline-thread .comment{position:relative}
+#comments h4,.comments .user a,.comments .continue a{font-size:16px; text-decoration:none;}
+#comments h4,.comments .continue a{font-weight:normal;color:#000; text-decoration:none;}
+#comments h4:after{content:"";position:absolute;bottom:-10px;left:10px;border-top:10px solid #fff;border-right:20px solid transparent;width:0;height:0;line-height:0}
+#comments .avatar-image-container img{border:0}
+.comment-thread{color:#111}
+.comment-thread ol{margin:0 0 20px}
+.comments .avatar-image-container,.comments .avatar-image-container img{width:48px;max-width:48px;height:48px;max-height:48px}
+.comments .comment-block,.comments .comments-content .comment-replies,.comments .comment-replybox-single{margin-left:60px}
+.comments .comment-block,.comments .comment-thread.inline-thread .comment{background:#fff;padding:10px}
+.comments .comments-content .comment{margin:15px 0 0;padding:0;width:100%;line-height:1em}
+.comments .comments-content .icon.blog-author{position:absolute;top:0px;right:0px;margin:0;background-image: url(https://si0.twimg.com/help/1307051362_737);width:23px;height:23px}
+.comments .comments-content .inline-thread{padding:0 0 0 20px}
+.comments .comments-content .comment-replies{margin-top:0}
+.comments .comment-content{padding:5px 0;line-height:1.4em}
+.comments .comment-thread.inline-thread{border-left:1px solid #ddd;background:transparent}
+.comments .comment-thread.inline-thread .comment{width:auto}
+.comments .comment-thread.inline-thread .comment:after{content:"";position:absolute;top:10px;left:-20px;border-top:1px solid #ddd;width:10px;height:0px}
+.comments .comment-thread.inline-thread .comment .comment-block{border:0;background:transparent;padding:0}
+.comments .comment-thread.inline-thread .comment-block{margin-left:48px}
+.comments .comment-thread.inline-thread .user a{font-size:13px; text-decoration:none;}
+.comments .comment-thread.inline-thread .avatar-image-container,.comments .comment-thread.inline-thread .avatar-image-container img{width:36px;max-width:36px;height:36px;max-height:36px}
+.comments .continue{border-top:0;width:100%}
+.comments .continue a{padding:10px 0;text-align:center; text-decoration:none;}
+.comment .continue{display:none}
+#comment-editor{width:103%!important}
+.comment-form{width:100%;max-width:100%}
+/*Blogger Threaded Comments Styles From http://www.dicasblogger.org*/
+#blog-pager-newer-link
+{
+float:left;
+}
+#blog-pager-older-link
+{
+float:right;
+}
+#blog-pager
+{
+text-align:center;
+font-size:12px;
+}
+.feed-links
+{
+display: none;
+clear:both;
+margin-left:10px;
+line-height:2.5em;
+color:#60875E;
+font-weight:normal;
+}
+/* Sidebar Content----------------------------------------------- */
+.sidebar
+{
+  font-size:13px;
+  color:#000000;
+}
+ 
+.sidebar ul
+{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+ 
+.sidebar li
+{
+  padding:5px 0;
+}
+ 
+.sidebar .widget
+{
+text-align: center;
+padding-bottom: 200px;
+background: url(https://i.imgur.com/SYcFs7s.png) bottom no-repeat;
+max-width: 300px;
+max-weight: 150px;
+}
+ 
+.sidebar .widget-content
+{
+background:#tranparent;
+margin:0px 0px 22px 0px;
+  padding:0px 10px 0px 10px;
+}
+.main .Blog
+{
+border-bottom-width:0;
+}
+/* Profile----------------------------------------------- */
+.profile-img
+{
+float:left;
+margin-top:0;
+margin-right:5px;
+margin-bottom:5px;
+margin-left:0;
+padding:0px;
+}
+.profile-data
+{
+margin:0;
+text-transform:none;
+letter-spacing:.1em;
+font:normal normal 100% Arial;
+color:#000;
+font-weight:none;
+line-height:1.6em;
+}
+.profile-datablock
+{
+margin:.5em 0;
+}
+.profile-textblock
+{
+margin:.5em 0;
+line-height:1.6em;
+}
+.profile-link
+{
+font:normal normal 78% Arial;
+text-transform:none;
+letter-spacing:.1em;
+}
+/* Footer */
+#credits
+{
+width:auto;
+height: auto;
+background:url(https://i.imgur.com/g568VDN.png);
+text-align:center;
+border-top:5px solid #E5E5E5;
+border-bottom:5px solid #E5E5E5;
+margin-bottom:-25px;
+padding:20px;
+color:#000;
+font-size:20px;
+font-family: 'Lobster', cursive;
+font-style:none;
+font-weight:none;
+text-transform:none;
+letter-spacing:0px;
+float:justify;
+}
+ 
+p.introduction:first-letter {
+font-family: Arial;
+font-size : 350%;
+font-weight : bold;
+float : left;
+width : 2em;
+padding-right: 5px;
+}
+ 
+]]></b:skin>
+ 
+  </head>
+ 
+ 
+ 
+  <body>
+  <b:section class='navbar' id='navbar' maxwidgets='1' showaddelement='no'>
+<b:widget id='Navbar1' locked='true' title='Navbar' type='Navbar'/>
+</b:section>
+ 
+  <div id='outer-wrapper'><div id='wrap2'>
+ 
+ 
+<div style='text-align:center; width:1024px; margin-left:auto; margin-right:auto;'>
+<img src='http://static.tumblr.com/87gqq2a/SKqmgdo9g/header.png'/>
+</div>
+ 
+      <div class='clear'/>
+ 
+    <div id='content-wrapper'>
+ 
+      <div id='crosscol-wrapper' style='text-align:center'>
+              </div>
+ 
+ 
+     <div id='sidebar-wrapper-left'>
+        <b:section class='sidebar' id='sidebar1' preferred='yes'>
+<b:widget id='Text2' locked='false' title='Status' type='Text'/>
+<b:widget id='Text9' locked='false' title='Cbox' type='Text'/>
+<b:widget id='Followers1' locked='false' title='Seguidores' type='Followers'/>
+<b:widget id='Stats1' locked='false' title='Visualizações' type='Stats'/>
+</b:section>
+      </div>
+ 
+ 
+      <div id='main-wrapper'>
+        <b:section class='main' id='main' showaddelement='no'>
+<b:widget id='Blog1' locked='true' title='Postagens no blog' type='Blog'/>
+</b:section>
+      </div>
+ 
+ 
+      <!-- spacer for skins that want sidebar and main to be the same height-->
+      <div class='clear'>&#160;</div>
+ 
+    </div> <!-- end content-wrapper -->
+ 
+ 
+    <div id='credits'>
+<a href='http://prettyvisuals.blogspot.com.br/'><img src='http://static.tumblr.com/q76yssm/Wztmia197/button.gif'/></a><br/>
+&#169;código base por <a href='http://www.flickr.com/photos/58249764@N08/'>Ana</a>.
+  </div>
+ 
+</div> <!-- end outer-wrapper --></div>
+ 
+</body>
+</html>
